@@ -1,0 +1,104 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Allemedia Google Reviews 1.0.0\n"
+"POT-Creation-Date: 2024-04-30 00:00+0000\n"
+"PO-Revision-Date: 2024-04-30 00:00+0000\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: allemedia-ai\n"
+
+msgid "Allemedia Opinie"
+msgstr "Allemedia Opinie"
+
+msgid "Adres Cloud Function"
+msgstr "Adres Cloud Function"
+
+msgid "Domyślny Place ID"
+msgstr "Domyślny Place ID"
+
+msgid "Czas cache (minuty)"
+msgstr "Czas cache (minuty)"
+
+msgid "Zapisz ustawienia"
+msgstr "Zapisz ustawienia"
+
+msgid "Wymuś odświeżenie danych"
+msgstr "Wymuś odświeżenie danych"
+
+msgid "Jeżeli podejrzewasz, że dane są nieaktualne, możesz wyczyścić cache i pobrać opinie ponownie przy następnym ładowaniu strony."
+msgstr "Jeżeli podejrzewasz, że dane są nieaktualne, możesz wyczyścić cache i pobrać opinie ponownie przy następnym ładowaniu strony."
+
+msgid "Wymuś odświeżenie"
+msgstr "Wymuś odświeżenie"
+
+msgid "Jak używać"
+msgstr "Jak używać"
+
+msgid "Użyj shortcode <code>[allemedia_reviews]</code> lub bloku <strong>Allemedia: Opinie Google</strong> w edytorze blokowym. Dostępne atrybuty: <code>place_id</code>, <code>limit</code>, <code>show_more_chars</code>."
+msgstr "Użyj shortcode <code>[allemedia_reviews]</code> lub bloku <strong>Allemedia: Opinie Google</strong> w edytorze blokowym. Dostępne atrybuty: <code>place_id</code>, <code>limit</code>, <code>show_more_chars</code>."
+
+msgid "Skonfiguruj identyfikator Place ID w ustawieniach wtyczki lub w atrybucie shortcode."
+msgstr "Skonfiguruj identyfikator Place ID w ustawieniach wtyczki lub w atrybucie shortcode."
+
+msgid "Brak opinii."
+msgstr "Brak opinii."
+
+msgid "Sprawdź co piszą o nas inni"
+msgstr "Sprawdź co piszą o nas inni"
+
+msgid "na podstawie %s opinii"
+msgstr "na podstawie %s opinii"
+
+msgid "Ocena: %1$s na 5"
+msgstr "Ocena: %1$s na 5"
+
+msgid "Średnia ocena: %1$s na 5"
+msgstr "Średnia ocena: %1$s na 5"
+
+msgid "Pokaż więcej"
+msgstr "Pokaż więcej"
+
+msgid "Pokaż mniej"
+msgstr "Pokaż mniej"
+
+msgid "Allemedia: Opinie Google"
+msgstr "Allemedia: Opinie Google"
+
+msgid "Wyświetl sekcję z opiniami klientów z Google."
+msgstr "Wyświetl sekcję z opiniami klientów z Google."
+
+msgid "Ustawienia opinii"
+msgstr "Ustawienia opinii"
+
+msgid "Place ID"
+msgstr "Place ID"
+
+msgid "Pozostaw puste, aby użyć wartości domyślnej."
+msgstr "Pozostaw puste, aby użyć wartości domyślnej."
+
+msgid "Limit opinii"
+msgstr "Limit opinii"
+
+msgid "Znaki przed „Pokaż więcej”"
+msgstr "Znaki przed „Pokaż więcej”"
+
+msgid "Podgląd sekcji będzie widoczny po zapisaniu lub w podglądzie strony."
+msgstr "Podgląd sekcji będzie widoczny po zapisaniu lub w podglądzie strony."
+
+msgid "Skonfiguruj atrybuty w panelu bocznym."
+msgstr "Skonfiguruj atrybuty w panelu bocznym."
+
+msgid "Cache został wyczyszczony."
+msgstr "Cache został wyczyszczony."
+
+msgid "Brak uprawnień."
+msgstr "Brak uprawnień."
+
+msgid "Jeżeli pozostawisz puste pole, zostanie użyty domyślny Place ID z ustawień wtyczki."
+msgstr "Jeżeli pozostawisz puste pole, zostanie użyty domyślny Place ID z ustawień wtyczki."
+
+msgid "Anonimowy użytkownik"
+msgstr "Anonimowy użytkownik"
+
