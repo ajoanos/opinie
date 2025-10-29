@@ -1,0 +1,27 @@
+{
+  "average_rating": 4.95,
+  "total_ratings": 3,
+  "reviews": [
+    {
+      "author_name": "Anna Kowalska",
+      "rating": 5,
+      "text": "Pełen profesjonalizm oraz piękna realizacja. Polecam serdecznie!",
+      "time": "2024-11-12T10:15:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Michał Nowak",
+      "rating": 5,
+      "text": "Doskonała obsługa klienta i ekspresowe terminy. Wrócę na pewno!",
+      "time": "2024-10-03T08:45:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Julia P.",
+      "rating": 5,
+      "text": "Projekt graficzny wyszedł znakomicie, a druk zachwycił całą naszą ekipę.",
+      "time": "2024-09-18T14:05:00Z",
+      "profile_photo_url": null
+    }
+  ]
+}
