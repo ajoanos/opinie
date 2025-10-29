@@ -1,26 +1,215 @@
 {
-  "average_rating": 4.95,
-  "total_ratings": 3,
+  "average_rating": 5.0,
+  "total_ratings": 124,
   "reviews": [
     {
-      "author_name": "Anna Kowalska",
+      "author_name": "Julia",
       "rating": 5,
-      "text": "Pełen profesjonalizm oraz piękna realizacja. Polecam serdecznie!",
-      "time": "2024-11-12T10:15:00Z",
+      "text": "Pełen profesjonalizm i przesympatyczna obsługa. Polecam wszystkim!",
+      "time": "2024-12-30T10:00:00Z",
       "profile_photo_url": null
     },
     {
-      "author_name": "Michał Nowak",
+      "author_name": "Mateusz",
       "rating": 5,
-      "text": "Doskonała obsługa klienta i ekspresowe terminy. Wrócę na pewno!",
-      "time": "2024-10-03T08:45:00Z",
+      "text": "Bardzo sprawna realizacja zamówienia i świetna komunikacja.",
+      "time": "2024-12-26T10:00:00Z",
       "profile_photo_url": null
     },
     {
-      "author_name": "Julia P.",
+      "author_name": "Anna",
       "rating": 5,
-      "text": "Projekt graficzny wyszedł znakomicie, a druk zachwycił całą naszą ekipę.",
-      "time": "2024-09-18T14:05:00Z",
+      "text": "Efekt końcowy przekroczył nasze oczekiwania, dziękujemy!",
+      "time": "2024-12-22T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Kamil",
+      "rating": 5,
+      "text": "Nowoczesne podejście do klienta i genialne pomysły na projekty.",
+      "time": "2024-12-18T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Martyna",
+      "rating": 5,
+      "text": "Szybko, konkretnie i z uśmiechem. Zdecydowanie wrócę.",
+      "time": "2024-12-18T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Paweł",
+      "rating": 5,
+      "text": "Polecam za rzetelność, terminowość i wyjątkowe wyczucie stylu.",
+      "time": "2024-12-14T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Ewelina",
+      "rating": 5,
+      "text": "Każdy detal dopracowany, a współpraca przebiegła bezproblemowo.",
+      "time": "2024-12-10T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Grzegorz",
+      "rating": 5,
+      "text": "Fenomenalna jakość usług i wsparcie na każdym etapie.",
+      "time": "2024-12-06T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Karolina",
+      "rating": 5,
+      "text": "Przemyślane doradztwo i pięknie przygotowane materiały.",
+      "time": "2024-12-06T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Marta",
+      "rating": 5,
+      "text": "Ciepła atmosfera i profesjonalne podejście do klienta.",
+      "time": "2024-12-02T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Julia K",
+      "rating": 5,
+      "text": "Pełen profesjonalizm i przesympatyczna obsługa. Polecam wszystkim!",
+      "time": "2024-11-28T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Mateusz L",
+      "rating": 5,
+      "text": "Bardzo sprawna realizacja zamówienia i świetna komunikacja.",
+      "time": "2024-11-24T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Anna M",
+      "rating": 5,
+      "text": "Efekt końcowy przekroczył nasze oczekiwania, dziękujemy!",
+      "time": "2024-11-24T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Kamil N",
+      "rating": 5,
+      "text": "Nowoczesne podejście do klienta i genialne pomysły na projekty.",
+      "time": "2024-11-20T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Martyna O",
+      "rating": 5,
+      "text": "Szybko, konkretnie i z uśmiechem. Zdecydowanie wrócę.",
+      "time": "2024-11-16T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Paweł P",
+      "rating": 5,
+      "text": "Polecam za rzetelność, terminowość i wyjątkowe wyczucie stylu.",
+      "time": "2024-11-12T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Ewelina Q",
+      "rating": 5,
+      "text": "Każdy detal dopracowany, a współpraca przebiegła bezproblemowo.",
+      "time": "2024-11-12T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Grzegorz R",
+      "rating": 5,
+      "text": "Fenomenalna jakość usług i wsparcie na każdym etapie.",
+      "time": "2024-11-08T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Karolina S",
+      "rating": 5,
+      "text": "Przemyślane doradztwo i pięknie przygotowane materiały.",
+      "time": "2024-11-04T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Marta T",
+      "rating": 5,
+      "text": "Ciepła atmosfera i profesjonalne podejście do klienta.",
+      "time": "2024-10-31T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Julia U",
+      "rating": 5,
+      "text": "Pełen profesjonalizm i przesympatyczna obsługa. Polecam wszystkim!",
+      "time": "2024-10-31T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Mateusz V",
+      "rating": 5,
+      "text": "Bardzo sprawna realizacja zamówienia i świetna komunikacja.",
+      "time": "2024-10-27T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Anna W",
+      "rating": 5,
+      "text": "Efekt końcowy przekroczył nasze oczekiwania, dziękujemy!",
+      "time": "2024-10-23T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Kamil X",
+      "rating": 5,
+      "text": "Nowoczesne podejście do klienta i genialne pomysły na projekty.",
+      "time": "2024-10-19T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Martyna Y",
+      "rating": 5,
+      "text": "Szybko, konkretnie i z uśmiechem. Zdecydowanie wrócę.",
+      "time": "2024-10-19T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Paweł Z",
+      "rating": 5,
+      "text": "Polecam za rzetelność, terminowość i wyjątkowe wyczucie stylu.",
+      "time": "2024-10-15T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Ewelina A",
+      "rating": 5,
+      "text": "Każdy detal dopracowany, a współpraca przebiegła bezproblemowo.",
+      "time": "2024-10-11T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Grzegorz B",
+      "rating": 5,
+      "text": "Fenomenalna jakość usług i wsparcie na każdym etapie.",
+      "time": "2024-10-07T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Karolina C",
+      "rating": 5,
+      "text": "Przemyślane doradztwo i pięknie przygotowane materiały.",
+      "time": "2024-10-07T10:00:00Z",
+      "profile_photo_url": null
+    },
+    {
+      "author_name": "Marta D",
+      "rating": 5,
+      "text": "Ciepła atmosfera i profesjonalne podejście do klienta.",
+      "time": "2024-10-03T10:00:00Z",
       "profile_photo_url": null
     }
   ]

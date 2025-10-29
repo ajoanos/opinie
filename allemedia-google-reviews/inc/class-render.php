@@ -99,7 +99,7 @@ class Render {
                     ],
                     'limit'           => [
                         'type'    => 'number',
-                        'default' => 12,
+                        'default' => 30,
                     ],
                     'show_more_chars' => [
                         'type'    => 'number',
@@ -120,7 +120,7 @@ class Render {
         $atts = shortcode_atts(
             [
                 'place_id'        => '',
-                'limit'           => 12,
+                'limit'           => 30,
                 'show_more_chars' => 220,
             ],
             $atts,
@@ -138,7 +138,7 @@ class Render {
             $attributes,
             [
                 'place_id'        => '',
-                'limit'           => 12,
+                'limit'           => 30,
                 'show_more_chars' => 220,
             ]
         );
@@ -151,7 +151,7 @@ class Render {
      */
     private function render_reviews( array $atts ): string {
         $place_id = (string) ( $atts['place_id'] ?? '' );
-        $limit    = max( 1, (int) ( $atts['limit'] ?? 12 ) );
+        $limit    = max( 1, (int) ( $atts['limit'] ?? 30 ) );
         $show     = (int) ( $atts['show_more_chars'] ?? 220 );
 
         if ( empty( $place_id ) && is_woocommerce_product() ) {
