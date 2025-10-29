@@ -177,13 +177,42 @@ class Render {
         wp_enqueue_style( 'allemedia-reviews' );
         wp_enqueue_script( 'allemedia-reviews' );
 
+        $review_url = sprintf(
+            'https://search.google.com/local/writereview?placeid=%s',
+            rawurlencode( $place_id )
+        );
+
+        /**
+         * Pozwala zmodyfikować adres URL przycisku kierującego do profilu Google.
+         *
+         * @param string $review_url URL recenzji.
+         * @param string $place_id   Identyfikator miejsca.
+         */
+        $review_url = apply_filters( 'allemedia_reviews_review_url', $review_url, $place_id );
+
+        $autoplay_interval = (int) apply_filters( 'allemedia_reviews_autoplay_interval', 6000 );
+        if ( $autoplay_interval < 1000 ) {
+            $autoplay_interval = 6000;
+        }
+
+        /**
+         * Pozwala włączyć lub wyłączyć autoplay karuzeli opinii.
+         *
+         * @param bool   $enabled  Czy autoplay ma być aktywny.
+         * @param string $place_id Identyfikator miejsca.
+         */
+        $autoplay_enabled = (bool) apply_filters( 'allemedia_reviews_autoplay_enabled', true, $place_id );
+
         $context = [
-            'average_rating'   => $data['average_rating'] ?? 0,
-            'total_ratings'    => $data['total_ratings'] ?? 0,
-            'reviews'          => $data['reviews'] ?? [],
-            'show_more_chars'  => max( 50, $show ),
-            'place_id'         => $place_id,
-            'limit'            => $limit,
+            'average_rating'    => $data['average_rating'] ?? 0,
+            'total_ratings'     => $data['total_ratings'] ?? 0,
+            'reviews'           => $data['reviews'] ?? [],
+            'show_more_chars'   => max( 50, $show ),
+            'place_id'          => $place_id,
+            'limit'             => $limit,
+            'review_url'        => $review_url,
+            'autoplay_interval' => $autoplay_interval,
+            'autoplay'          => $autoplay_enabled,
         ];
 
         $this->prepare_schema_payload( $context );

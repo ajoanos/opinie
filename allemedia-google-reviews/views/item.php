@@ -39,7 +39,7 @@ $text_id = 'amr-review-text-' . $index . '-' . uniqid();
 $card_id = 'amr-review-card-' . $index . '-' . uniqid();
 $star_id = uniqid( 'amr-review-star-', false );
 ?>
-<article class="amr-review-card" id="<?php echo esc_attr( $card_id ); ?>">
+<article class="amr-review-card" id="<?php echo esc_attr( $card_id ); ?>" role="listitem">
     <div class="amr-review-card__header">
         <div class="amr-review-card__stars" aria-label="<?php echo esc_attr( sprintf( __( 'Ocena: %1$s na 5', 'allemedia-reviews' ), number_format_i18n( $rating, 1 ) ) ); ?>">
             <?php echo render_stars( $rating, $star_id ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>

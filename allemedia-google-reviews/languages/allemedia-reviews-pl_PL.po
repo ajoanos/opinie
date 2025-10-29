@@ -48,6 +48,18 @@ msgstr "Brak opinii."
 msgid "Sprawdź co piszą o nas inni"
 msgstr "Sprawdź co piszą o nas inni"
 
+msgid "Opinie z Google"
+msgstr "Opinie z Google"
+
+msgid "Oceń nas w Google"
+msgstr "Oceń nas w Google"
+
+msgid "Najnowsze opinie naszych klientów prosto z Google."
+msgstr "Najnowsze opinie naszych klientów prosto z Google."
+
+msgid "Najnowsze opinie"
+msgstr "Najnowsze opinie"
+
 msgid "na podstawie %s opinii"
 msgstr "na podstawie %s opinii"
 
@@ -62,6 +74,12 @@ msgstr "Pokaż więcej"
 
 msgid "Pokaż mniej"
 msgstr "Pokaż mniej"
+
+msgid "Poprzednia opinia"
+msgstr "Poprzednia opinia"
+
+msgid "Następna opinia"
+msgstr "Następna opinia"
 
 msgid "Allemedia: Opinie Google"
 msgstr "Allemedia: Opinie Google"
