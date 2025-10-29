@@ -12,8 +12,8 @@ msgstr ""
 msgid "Allemedia Opinie"
 msgstr "Allemedia Opinie"
 
-msgid "Adres Cloud Function"
-msgstr "Adres Cloud Function"
+msgid "Ogólne ustawienia"
+msgstr "Ogólne ustawienia"
 
 msgid "Domyślny Place ID"
 msgstr "Domyślny Place ID"
@@ -36,8 +36,8 @@ msgstr "Wymuś odświeżenie"
 msgid "Jak używać"
 msgstr "Jak używać"
 
-msgid "Użyj shortcode <code>[allemedia_reviews]</code> lub bloku <strong>Allemedia: Opinie Google</strong> w edytorze blokowym. Dostępne atrybuty: <code>place_id</code>, <code>limit</code>, <code>show_more_chars</code>."
-msgstr "Użyj shortcode <code>[allemedia_reviews]</code> lub bloku <strong>Allemedia: Opinie Google</strong> w edytorze blokowym. Dostępne atrybuty: <code>place_id</code>, <code>limit</code>, <code>show_more_chars</code>."
+msgid "Użyj shortcode <code>[allemedia_reviews]</code> lub bloku <strong>Allemedia: Opinie Google</strong> w edytorze blokowym. Dostępne atrybuty: <code>place_id</code>, <code>limit</code>, <code>show_more_chars</code>. Wtyczka korzysta automatycznie z skonfigurowanego klucza API Google."
+msgstr "Użyj shortcode <code>[allemedia_reviews]</code> lub bloku <strong>Allemedia: Opinie Google</strong> w edytorze blokowym. Dostępne atrybuty: <code>place_id</code>, <code>limit</code>, <code>show_more_chars</code>. Wtyczka korzysta automatycznie z skonfigurowanego klucza API Google."
 
 msgid "Skonfiguruj identyfikator Place ID w ustawieniach wtyczki lub w atrybucie shortcode."
 msgstr "Skonfiguruj identyfikator Place ID w ustawieniach wtyczki lub w atrybucie shortcode."

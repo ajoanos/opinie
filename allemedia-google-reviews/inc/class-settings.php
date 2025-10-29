@@ -80,17 +80,9 @@ class Settings {
 
         add_settings_section(
             'allemedia_reviews_general',
-            __( 'Konfiguracja połączenia', 'allemedia-reviews' ),
+            __( 'Ogólne ustawienia', 'allemedia-reviews' ),
             '__return_false',
             'allemedia_reviews_settings'
-        );
-
-        add_settings_field(
-            'cloud_function_url',
-            __( 'Adres Cloud Function', 'allemedia-reviews' ),
-            [ $this, 'render_cloud_url_field' ],
-            'allemedia_reviews_settings',
-            'allemedia_reviews_general'
         );
 
         add_settings_field(
@@ -142,17 +134,8 @@ class Settings {
 
         echo '<hr />';
         echo '<h2>' . esc_html__( 'Jak używać', 'allemedia-reviews' ) . '</h2>';
-        echo '<p>' . wp_kses_post( __( 'Użyj shortcode <code>[allemedia_reviews]</code> lub bloku <strong>Allemedia: Opinie Google</strong> w edytorze blokowym. Dostępne atrybuty: <code>place_id</code>, <code>limit</code>, <code>show_more_chars</code>.', 'allemedia-reviews' ) ) . '</p>';
+        echo '<p>' . wp_kses_post( __( 'Użyj shortcode <code>[allemedia_reviews]</code> lub bloku <strong>Allemedia: Opinie Google</strong> w edytorze blokowym. Dostępne atrybuty: <code>place_id</code>, <code>limit</code>, <code>show_more_chars</code>. Wtyczka korzysta automatycznie z skonfigurowanego klucza API Google.', 'allemedia-reviews' ) ) . '</p>';
         echo '</div>';
-    }
-
-    /**
-     * Render pola adresu Cloud Function.
-     */
-    public function render_cloud_url_field(): void {
-        $value = (string) $this->get_option( 'cloud_function_url', '' );
-        echo '<input type="url" name="' . esc_attr( self::OPTION_NAME ) . '[cloud_function_url]" value="' . esc_attr( $value ) . '" class="regular-text" placeholder="https://region-project.cloudfunctions.net" />';
-        echo '<p class="description">' . esc_html__( 'Adres bez końcowego ukośnika.', 'allemedia-reviews' ) . '</p>';
     }
 
     /**
@@ -200,10 +183,6 @@ class Settings {
     public function sanitize_settings( array $input ): array {
         $sanitized = $this->get_defaults();
 
-        if ( isset( $input['cloud_function_url'] ) ) {
-            $sanitized['cloud_function_url'] = esc_url_raw( trim( $input['cloud_function_url'] ) );
-        }
-
         if ( isset( $input['default_place_id'] ) ) {
             $sanitized['default_place_id'] = sanitize_text_field( $input['default_place_id'] );
         }
@@ -235,7 +214,6 @@ class Settings {
      */
     private function get_defaults(): array {
         return [
-            'cloud_function_url' => '',
             'default_place_id'   => '',
             'cache_ttl_minutes'  => 1440,
         ];

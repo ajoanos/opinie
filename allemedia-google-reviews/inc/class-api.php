@@ -136,19 +136,26 @@ class API {
      * Pobiera dane z endpointu.
      */
     private function request_reviews( string $place_id, int $limit ): array {
-        $base_url = (string) $this->settings->get_option( 'cloud_function_url', '' );
-        if ( empty( $base_url ) ) {
-            error_log( '[Allemedia Reviews] Brak skonfigurowanego adresu cloud_function_url.' );
+        if ( ! defined( 'ALLEMEDIA_GOOGLE_API_KEY' ) || '' === ALLEMEDIA_GOOGLE_API_KEY ) {
+            error_log( '[Allemedia Reviews] Brak zdefiniowanego klucza ALLEMEDIA_GOOGLE_API_KEY.' );
             return [];
         }
 
-        $endpoint = rtrim( $base_url, '/' ) . '/reviews';
-        $url      = add_query_arg(
+        if ( '' === $place_id ) {
+            error_log( '[Allemedia Reviews] Brak przekazanego identyfikatora place_id.' );
+            return [];
+        }
+
+        $url = add_query_arg(
             [
-                'place_id' => $place_id,
-                'limit'    => $limit,
+                'place_id'                => $place_id,
+                'fields'                  => 'rating,user_ratings_total,reviews(author_name,rating,text,time,profile_photo_url)',
+                'reviews_no_translations' => 'true',
+                'reviews_sort'            => 'newest',
+                'language'                => 'pl',
+                'key'                     => ALLEMEDIA_GOOGLE_API_KEY,
             ],
-            $endpoint
+            'https://maps.googleapis.com/maps/api/place/details/json'
         );
 
         $response = wp_remote_get(
@@ -156,8 +163,7 @@ class API {
             [
                 'timeout' => 8,
                 'headers' => [
-                    'Accept'         => 'application/json',
-                    'X-Goog-Api-Key' => defined( 'ALLEMEDIA_GOOGLE_API_KEY' ) ? ALLEMEDIA_GOOGLE_API_KEY : '',
+                    'Accept' => 'application/json',
                 ],
             ]
         );
@@ -185,33 +191,50 @@ class API {
             return [];
         }
 
-        $decoded['average_rating'] = isset( $decoded['average_rating'] ) ? (float) $decoded['average_rating'] : 0.0;
-        $decoded['total_ratings']  = isset( $decoded['total_ratings'] ) ? (int) $decoded['total_ratings'] : 0;
-        $decoded['reviews']        = isset( $decoded['reviews'] ) && is_array( $decoded['reviews'] ) ? array_values( $decoded['reviews'] ) : [];
+        $status = isset( $decoded['status'] ) ? (string) $decoded['status'] : '';
+        if ( 'OK' !== $status ) {
+            error_log( sprintf( '[Allemedia Reviews] Nieoczekiwany status API: %s', $status ?: 'brak' ) );
+            return [];
+        }
 
-        $decoded['reviews'] = array_map(
+        $result = $decoded['result'] ?? [];
+        if ( ! is_array( $result ) ) {
+            return [];
+        }
+
+        $average  = isset( $result['rating'] ) ? (float) $result['rating'] : 0.0;
+        $total    = isset( $result['user_ratings_total'] ) ? (int) $result['user_ratings_total'] : 0;
+        $reviews  = isset( $result['reviews'] ) && is_array( $result['reviews'] ) ? array_slice( $result['reviews'], 0, $limit ) : [];
+        $reviews  = array_map(
             static function ( $review ) {
+                $timestamp = isset( $review['time'] ) ? (int) $review['time'] : 0;
+                $iso_date  = $timestamp > 0 ? gmdate( 'c', $timestamp ) : '';
+
                 return [
                     'author_name'       => isset( $review['author_name'] ) ? (string) $review['author_name'] : '',
                     'rating'            => isset( $review['rating'] ) ? (float) $review['rating'] : 0.0,
                     'text'              => isset( $review['text'] ) ? (string) $review['text'] : '',
-                    'time'              => isset( $review['time'] ) ? (string) $review['time'] : '',
+                    'time'              => $iso_date,
                     'profile_photo_url' => $review['profile_photo_url'] ?? null,
                 ];
             },
-            $decoded['reviews']
+            $reviews
         );
 
-        if ( $decoded['total_ratings'] < count( $decoded['reviews'] ) ) {
-            $decoded['total_ratings'] = count( $decoded['reviews'] );
+        if ( $total < count( $reviews ) ) {
+            $total = count( $reviews );
         }
 
-        if ( $decoded['average_rating'] <= 0 && ! empty( $decoded['reviews'] ) ) {
-            $sum = array_sum( array_column( $decoded['reviews'], 'rating' ) );
-            $decoded['average_rating'] = $sum ? round( $sum / count( $decoded['reviews'] ), 2 ) : 0.0;
+        if ( $average <= 0 && ! empty( $reviews ) ) {
+            $sum     = array_sum( array_column( $reviews, 'rating' ) );
+            $average = $sum ? round( $sum / count( $reviews ), 2 ) : 0.0;
         }
 
-        return $decoded;
+        return [
+            'average_rating' => $average,
+            'total_ratings'  => $total,
+            'reviews'        => $reviews,
+        ];
     }
 
     /**
