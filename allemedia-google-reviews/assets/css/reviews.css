@@ -42,6 +42,16 @@
     opacity: 0.75;
 }
 
+.amr-reviews::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 10% 10%, rgba(66, 133, 244, 0.15), transparent 45%),
+        radial-gradient(circle at 90% 20%, rgba(52, 168, 83, 0.12), transparent 52%),
+        radial-gradient(circle at 50% 100%, rgba(251, 188, 5, 0.12), transparent 55%);
+    pointer-events: none;
+}
+
 .amr-reviews__inner {
     position: relative;
     z-index: 1;
@@ -139,6 +149,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
 }
 
 .amr-summary-card__brand {
@@ -223,6 +234,7 @@
     letter-spacing: 0.01em;
     box-shadow: 0 22px 50px rgba(15, 23, 42, 0.25);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
 }
 
 .amr-summary-card__cta:hover,
