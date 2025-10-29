@@ -48,7 +48,7 @@ class API {
      *
      * @return array{average_rating:float,total_ratings:int,reviews:array<int,array<string,mixed>>}
      */
-    public function get_reviews( string $place_id, int $limit = 12 ): array {
+    public function get_reviews( string $place_id, int $limit = 30 ): array {
         $place_id = trim( $place_id );
         $limit    = max( 1, $limit );
 

@@ -23,6 +23,12 @@ $autoplay_value     = $autoplay_available ? '1' : '0';
 $autoplay_interval  = $autoplay_interval < 1000 ? 6000 : $autoplay_interval;
 
 $heading_id = 'amr-reviews-heading-' . uniqid();
+
+$summary_data = [
+    'average' => $average,
+    'total'   => $total,
+    'review'  => $review_url,
+];
 ?>
 <section
     class="amr-reviews amr-is-loading"
@@ -35,15 +41,16 @@ $heading_id = 'amr-reviews-heading-' . uniqid();
     <div class="amr-reviews__inner">
         <?php
         $header_data = [
-            'average' => $average,
-            'total'   => $total,
             'heading' => $heading_id,
-            'review'  => $review_url,
         ];
         include __DIR__ . '/header.php';
         ?>
         <div class="amr-reviews__carousel">
             <div class="amr-reviews__list" aria-live="polite"<?php echo empty( $reviews ) ? '' : ' role="list"'; ?>>
+                <?php
+                $summary_data = apply_filters( 'allemedia_reviews_summary_card_data', $summary_data, $data );
+                include __DIR__ . '/summary-card.php';
+                ?>
                 <?php if ( empty( $reviews ) ) : ?>
                     <p class="amr-reviews__empty"><?php esc_html_e( 'Brak opinii.', 'allemedia-reviews' ); ?></p>
                 <?php else : ?>
